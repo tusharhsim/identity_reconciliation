@@ -1,9 +1,9 @@
-#Identity Reconciliation Service
+# Identity Reconciliation Service
 
 ## Description
 A web service to identify and keep track of a customer's identity across multiple purchases with different contact information.
 
-## Endpoint
+## Endpoint - https://identity-reconciliation-uwwt.onrender.com
 ### POST /identify
 #### Request Body
 ```json
