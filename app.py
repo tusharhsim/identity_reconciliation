@@ -42,6 +42,10 @@ class Contact(db.Model):
         self.linkPrecedence = linkPrecedence
 
 
+@app.route('/')
+def hello_world():
+    return 'Hello there!'
+
 @app.route('/identify', methods=['POST'])
 def identify():
     try:
@@ -102,4 +106,4 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
 
-    app.run(port=1502)
+    app.run(debug=True)
