@@ -74,7 +74,7 @@ def identify():
                     secondary_contacts.append(contact)
 
             if ((email and email != primary_contact.email) or (phoneNumber and phoneNumber != primary_contact.phoneNumber)) \
-                    and not any(sc.email == email or sc.phoneNumber == phoneNumber for sc in secondary_contacts):
+                    and not any(sc.email == email and sc.phoneNumber == phoneNumber for sc in secondary_contacts):
                 new_secondary = Contact(email=email, phoneNumber=phoneNumber, linkedId=primary_contact.id,
                                         linkPrecedence='secondary')
                 db.session.add(new_secondary)
